@@ -1,0 +1,4 @@
+#RPGBookshelves will only work in the following specified worlds:
+FunctionalWorlds:
+  - 'exampleworld1'
+  - 'exampleworld2'

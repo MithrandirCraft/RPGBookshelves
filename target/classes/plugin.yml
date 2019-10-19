@@ -1,0 +1,7 @@
+name: RPGBookshelves
+version: 1.1
+main: es.mithrandircraft.rpgbookshelves.RPGBookshelves
+api-version: 1.13
+authors: [__Mithrandir__]
+description: Improve your bookshelves with extra book storing features.
+website: www.mithrandircraft.es
