@@ -1,5 +1,6 @@
 package es.mithrandircraft.rpgbookshelves.events;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.event.EventHandler;
@@ -25,7 +26,7 @@ public class EntityExplodeEv implements Listener {
                 {
                     if(block.getType() == Material.BOOKSHELF)
                     {
-                        mainClassAccess.mm.JSONRemoveRPGLibraryIfExists(block.getX(), block.getY(), block.getZ(), block.getWorld().getName());
+                        Bukkit.getScheduler().runTaskAsynchronously(mainClassAccess, () -> mainClassAccess.mm.JSONRemoveRPGLibraryIfExists(block.getX(), block.getY(), block.getZ(), block.getWorld().getName()));
                     }
                 }
                 break;

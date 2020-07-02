@@ -1,5 +1,6 @@
 package es.mithrandircraft.rpgbookshelves.events;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -18,7 +19,7 @@ public class BlockBurnEv implements Listener {
         {
             for(int i = 0; i < mainClassAccess.getConfig().getStringList("FunctionalWorlds").size(); i++) {
                 if (mainClassAccess.getConfig().getStringList("FunctionalWorlds").get(i).equals(event.getBlock().getWorld().getName())) {
-                    mainClassAccess.mm.JSONRemoveRPGLibraryIfExists(event.getBlock().getX(), event.getBlock().getY(), event.getBlock().getZ(), event.getBlock().getWorld().getName());
+                    Bukkit.getScheduler().runTaskAsynchronously(mainClassAccess, () -> mainClassAccess.mm.JSONRemoveRPGLibraryIfExists(event.getBlock().getX(), event.getBlock().getY(), event.getBlock().getZ(), event.getBlock().getWorld().getName()));
                     break;
                 }
             }

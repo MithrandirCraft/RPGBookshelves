@@ -2,10 +2,10 @@ package es.mithrandircraft.rpgbookshelves;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
+import es.mithrandircraft.rpgbookshelves.callbacks.*;
+import org.bukkit.Bukkit;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,7 +67,7 @@ public class MemoryManager {
         return JSONDeserializeRPGShelves(JSONGetFromFile());
     }
 
-    public void JSONAddLibraryIfNotExists(int X, int Y, int Z, String world, List<String> content) //Adds an rpg library with specified book content to the JSON list if it didn't already exist.
+    public void JSONAddLibraryIfNotExists(int X, int Y, int Z, String world, List<String> content, LibraryAddCallback callback) //Adds an rpg library with specified book content to the JSON list if it didn't already exist.
     {
         //Get the whole list of shelves:
         List<RPGShelf> shelves = JSONGetShelves();
@@ -84,6 +84,12 @@ public class MemoryManager {
         if(!libraryFound){ //Shelf didn't already exist, add it, and store list back to JSON file:
             shelves.add(new RPGShelf(X, Y, Z, world, content));
             JSONStoreInFile(JSONSerializeRPGShelves(shelves));
+            Bukkit.getScheduler().runTask(mainClassAccess, new Runnable() { //Callback to main thread
+                @Override
+                public void run() {
+                    callback.onAdded();
+                }
+            });
         }
     }
 
@@ -103,7 +109,7 @@ public class MemoryManager {
         }
     }
 
-    public boolean JSONGetPagesIfRPGLibraryExists(int X, int Y, int Z, String world, List<String> pages)
+    public void JSONGetPagesIfRPGLibraryExists(int X, int Y, int Z, String world, LibraryReadCallback callback)
     {
         //Get the whole list of shelves:
         List<RPGShelf> shelves = JSONGetShelves();
@@ -112,10 +118,13 @@ public class MemoryManager {
         {
             if(shelf.x == X && shelf.y == Y && shelf.z == Z && shelf.w.equals(world)) //Shelf is registered at coordinates and world
             {
-                pages.addAll(shelf.bookContents);
-                return true;
+                Bukkit.getScheduler().runTask(mainClassAccess, new Runnable() { //Callback to main thread
+                    @Override
+                    public void run() {
+                        callback.onQueryDone(shelf.bookContents);
+                    }
+                });
             }
         }
-        return false;
     }
 }

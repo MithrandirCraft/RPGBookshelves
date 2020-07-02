@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66cb6f01-8518-4d3e-879e-fe43e08037b4" name="Default Changelist" comment="" />
+    <list default="true" id="66cb6f01-8518-4d3e-879e-fe43e08037b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/callbacks/LibraryAddCallback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/callbacks/LibraryReadCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_14_4_R0_1_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_14_4_R0_1_SNAPSHOT.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/MemoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/MemoryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/BlockBreakEv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/BlockBreakEv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/BlockBurnEv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/BlockBurnEv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/BlockExplodeEv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/BlockExplodeEv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/BlockPistonExtendEv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/BlockPistonExtendEv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/EntityExplodeEv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/EntityExplodeEv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/PlayerInteractEv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/PlayerInteractEv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RPGBookshelves-1.1-shaded.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RPGBookshelves-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/MemoryManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/MemoryManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/BlockBreakEv.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/BlockBreakEv.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/BlockBurnEv.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/BlockBurnEv.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/BlockExplodeEv.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/BlockExplodeEv.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/BlockPistonExtendEv.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/BlockPistonExtendEv.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/EntityExplodeEv.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/EntityExplodeEv.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/PlayerInteractEv.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/PlayerInteractEv.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-RPGBookshelves-1.1.jar" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,8 +40,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -26,7 +58,8 @@
   </component>
   <component name="ProjectId" id="1SIJoP4q6oAgiuIfPqRawk2mxPM" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SimpleHubParkour" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AntiXrayHeuristics" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -98,5 +131,18 @@
       <updated>1571245350872</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

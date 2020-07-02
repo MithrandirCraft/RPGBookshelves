@@ -1,5 +1,6 @@
 package es.mithrandircraft.rpgbookshelves.events;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.event.EventHandler;
@@ -23,7 +24,7 @@ public class BlockPistonExtendEv implements Listener {
                 List<Block> pushedBlocks = new ArrayList<Block>(event.getBlocks());
                 for(Block block : pushedBlocks)
                 {
-                    if(block.getType() == Material.BOOKSHELF) mainClassAccess.mm.JSONRemoveRPGLibraryIfExists(block.getX(), block.getY(), block.getZ(), event.getBlock().getWorld().getName());
+                    if(block.getType() == Material.BOOKSHELF) Bukkit.getScheduler().runTaskAsynchronously(mainClassAccess, () -> mainClassAccess.mm.JSONRemoveRPGLibraryIfExists(block.getX(), block.getY(), block.getZ(), event.getBlock().getWorld().getName()));
                 }
                 break;
             }
