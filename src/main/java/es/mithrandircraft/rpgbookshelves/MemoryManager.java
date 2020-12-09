@@ -1,12 +1,10 @@
 package es.mithrandircraft.rpgbookshelves;
 
-import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import es.mithrandircraft.rpgbookshelves.callbacks.*;
 import org.bukkit.Bukkit;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public class MemoryManager {
@@ -17,31 +15,39 @@ public class MemoryManager {
 
     //Java File I.O. functions
 
-    public boolean JSONFileCreateIfNotExists() //Returns true if file was created within directory
+    public boolean CreateBaseSaveDirectoryIfNotExists()
+    {
+        File directory = new File(mainClassAccess.getDataFolder().getAbsolutePath() + "/ShelfData");
+        if (!directory.exists()){
+            return directory.mkdir();
+        }
+        else return false;
+    }
+    //Returns true if file was created within directory
+    public boolean CreateFileIfNotExists(String filename)
     {
         try {
             //Create file (will do nothing if it already exists):
-            if(new File(mainClassAccess.getDataFolder().getAbsolutePath() + "/rpgshelves.json").createNewFile()){ JSONStoreInFile("[]"); } //Store empty JSON array in file
+            return new File(mainClassAccess.getDataFolder().getAbsolutePath() + "/ShelfData/" + filename).createNewFile(); //Creates empty json file with adequate naming
         } catch (IOException e) {
             e.printStackTrace();
             return false;
         }
-        return true;
     }
-    private void JSONStoreInFile(String toStore) //Writes json content as string to file
+    private void JSONStoreInFile(String filename, String store) //Writes json content as string to file
     {
         try {
-            FileWriter writer = new FileWriter(mainClassAccess.getDataFolder().getAbsolutePath() + "/rpgshelves.json");
-            writer.write(toStore);
+            FileWriter writer = new FileWriter(mainClassAccess.getDataFolder().getAbsolutePath() + "/ShelfData/" + filename);
+            writer.write(store);
             writer.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    private BufferedReader JSONGetFromFile() //Gets json content from file in BufferedReader format
+    private BufferedReader JSONGetFromFile(File file) //Gets json content from file in BufferedReader format
     {
         try {
-            return new BufferedReader(new FileReader(mainClassAccess.getDataFolder().getAbsolutePath() + "/rpgshelves.json")); //Return buffered file contents
+            return new BufferedReader(new FileReader(file)); //Return buffered file contents
         }catch (IOException e) {
             e.printStackTrace();
             return null;
@@ -50,44 +56,52 @@ public class MemoryManager {
 
     //GSON Serialization functions
 
-    private String JSONSerializeRPGShelves(List<RPGShelf> RPGShelves) //Serializes class ArrayList to json String
+    private String JSONSerializeRPGShelf(RPGShelf rpgShelf) //Serializes class ArrayList to json String
     {
-        return new Gson().toJson(RPGShelves);
+        return new Gson().toJson(rpgShelf);
     }
 
-    private List<RPGShelf> JSONDeserializeRPGShelves(BufferedReader RPGShelves) //Serializes from BufferedReader to ArrayList.
+    private RPGShelf JSONDeserializeRPGShelf(BufferedReader rpgShelf) //Deserializes from BufferedReader to ArrayList.
     {
-        return new Gson().fromJson(RPGShelves, new TypeToken<ArrayList<RPGShelf>>(){}.getType()); //TypeToken gets the type of an arraylist of RPGShelves
+        return new Gson().fromJson(rpgShelf, RPGShelf.class);
+        //TypeToken would get the type of an arraylist of RPGShelves (for the second parameter):
+        //new TypeToken<ArrayList<RPGShelf>>(){}.getType()
     }
 
     //File data manipulation and querying using GSON
 
-    public List<RPGShelf> JSONGetShelves() //Gets deserialized rpg shelves stored in JSON file
+    public RPGShelf JSONGetShelf(File file) //Gets deserialized rpg shelf stored in JSON file
     {
-        return JSONDeserializeRPGShelves(JSONGetFromFile());
+        return JSONDeserializeRPGShelf(JSONGetFromFile(file));
     }
 
     public void JSONAddLibraryIfNotExists(int X, int Y, int Z, String world, List<String> content, LibraryAddCallback callback) //Adds an rpg library with specified book content to the JSON list if it didn't already exist.
     {
-        //Get the whole list of shelves:
-        List<RPGShelf> shelves = JSONGetShelves();
         //Look for possible rpg library registered with coordinates:
-        boolean libraryFound = false;
-        for(RPGShelf shelf : shelves)
+        String filename = SaveFileNameManager.JSONConstructFilename(world, X, Y, Z);
+
+        boolean done = false;
+        if(CreateFileIfNotExists(filename))
         {
-            if(shelf.x == X && shelf.y == Y && shelf.z == Z && shelf.w.equals(world)) //Shelf is already registered at coordinates and world
-            {
-                libraryFound = true;
-                break;
-            }
+            JSONStoreInFile(filename, JSONSerializeRPGShelf(new RPGShelf(content)));
+            done = true;
         }
-        if(!libraryFound){ //Shelf didn't already exist, add it, and store list back to JSON file:
-            shelves.add(new RPGShelf(X, Y, Z, world, content));
-            JSONStoreInFile(JSONSerializeRPGShelves(shelves));
+
+        if(done)
+        {
             Bukkit.getScheduler().runTask(mainClassAccess, new Runnable() { //Callback to main thread
                 @Override
                 public void run() {
-                    callback.onAdded();
+                    callback.done(true);
+                }
+            });
+        }
+        else
+        {
+            Bukkit.getScheduler().runTask(mainClassAccess, new Runnable() { //Callback to main thread
+                @Override
+                public void run() {
+                    callback.done(false);
                 }
             });
         }
@@ -95,36 +109,24 @@ public class MemoryManager {
 
     public void JSONRemoveRPGLibraryIfExists(int X, int Y, int Z, String world)
     {
-        //Get the whole list of shelves:
-        List<RPGShelf> shelves = JSONGetShelves();
-        //Look for possible rpg library registered with coordinates:
-        for(RPGShelf shelf : shelves)
-        {
-            if(shelf.x == X && shelf.y == Y && shelf.z == Z && shelf.w.equals(world)) //Shelf is registered at coordinates and world
-            {
-                shelves.remove(shelf); //Remove shelf from list
-                JSONStoreInFile(JSONSerializeRPGShelves(shelves)); //Sotre back
-                break;
-            }
-        }
+        String filename = SaveFileNameManager.JSONConstructFilename(world, X, Y, Z);
+        new File(mainClassAccess.getDataFolder().getAbsolutePath() + "/ShelfData/" + filename).delete();
     }
 
     public void JSONGetPagesIfRPGLibraryExists(int X, int Y, int Z, String world, LibraryReadCallback callback)
     {
-        //Get the whole list of shelves:
-        List<RPGShelf> shelves = JSONGetShelves();
         //Look for possible rpg library registered with coordinates:
-        for(RPGShelf shelf : shelves)
-        {
-            if(shelf.x == X && shelf.y == Y && shelf.z == Z && shelf.w.equals(world)) //Shelf is registered at coordinates and world
-            {
-                Bukkit.getScheduler().runTask(mainClassAccess, new Runnable() { //Callback to main thread
-                    @Override
-                    public void run() {
-                        callback.onQueryDone(shelf.bookContents);
-                    }
-                });
-            }
+        String filename = SaveFileNameManager.JSONConstructFilename(world, X, Y, Z);
+        File file = new File(mainClassAccess.getDataFolder().getAbsolutePath() + "/ShelfData/" + filename);
+        if(file.exists()) {
+            //Get book data from file:
+            RPGShelf shelf = JSONGetShelf(file);
+            Bukkit.getScheduler().runTask(mainClassAccess, new Runnable() { //Callback to main thread
+                @Override
+                public void run() {
+                    callback.onQueryDone(shelf.bookContents);
+                }
+            });
         }
     }
 }

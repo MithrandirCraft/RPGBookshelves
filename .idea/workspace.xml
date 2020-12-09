@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="66cb6f01-8518-4d3e-879e-fe43e08037b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/callbacks/LibraryAddCallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/callbacks/LibraryReadCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_14_4_R0_1_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_14_4_R0_1_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/SaveFileNameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_21_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_13_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_14_4_R0_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/BookUtil.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/MemoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/MemoryManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/BlockBreakEv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/BlockBreakEv.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/BlockBurnEv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/BlockBurnEv.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/BlockExplodeEv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/BlockExplodeEv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/RPGBookshelves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/RPGBookshelves.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/RPGShelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/RPGShelf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/ReflectionUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/callbacks/LibraryAddCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/callbacks/LibraryAddCallback.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/BlockPistonExtendEv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/BlockPistonExtendEv.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/EntityExplodeEv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/EntityExplodeEv.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/PlayerInteractEv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/mithrandircraft/rpgbookshelves/events/PlayerInteractEv.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RPGBookshelves-1.1-shaded.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RPGBookshelves-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/RPGBookshelves.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/MemoryManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/MemoryManager$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/MemoryManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/MemoryManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/BlockBreakEv.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/BlockBreakEv.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/BlockBurnEv.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/BlockBurnEv.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/BlockExplodeEv.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/BlockExplodeEv.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/BlockPistonExtendEv.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/BlockPistonExtendEv.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/EntityExplodeEv.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/EntityExplodeEv.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/RPGBookshelves.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/RPGBookshelves.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/PlayerInteractEv.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/es/mithrandircraft/rpgbookshelves/events/PlayerInteractEv.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-RPGBookshelves-1.1.jar" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,8 +41,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -52,28 +54,21 @@
       <MavenImportingSettings>
         <option name="downloadDocsAutomatically" value="true" />
         <option name="downloadSourcesAutomatically" value="true" />
-        <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectId" id="1SIJoP4q6oAgiuIfPqRawk2mxPM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AntiXrayHeuristics" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../APITestsWithMaven" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Remote.TestServer">
+  <component name="RunManager" selected="Remote JVM Debug.TestServer">
     <configuration name="RPGBookshelves build" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -116,9 +111,10 @@
     </configuration>
     <list>
       <item itemvalue="Maven.RPGBookshelves build" />
-      <item itemvalue="Remote.TestServer" />
+      <item itemvalue="Remote JVM Debug.TestServer" />
     </list>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -137,12 +133,11 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

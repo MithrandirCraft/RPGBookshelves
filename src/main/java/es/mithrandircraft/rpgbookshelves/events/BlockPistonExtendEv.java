@@ -21,7 +21,7 @@ public class BlockPistonExtendEv implements Listener {
     {
         for(int i = 0; i < mainClassAccess.getConfig().getStringList("FunctionalWorlds").size(); i++) {
             if (mainClassAccess.getConfig().getStringList("FunctionalWorlds").get(i).equals(event.getBlock().getWorld().getName())) {
-                List<Block> pushedBlocks = new ArrayList<Block>(event.getBlocks());
+                List<Block> pushedBlocks = new ArrayList<>(event.getBlocks());
                 for(Block block : pushedBlocks)
                 {
                     if(block.getType() == Material.BOOKSHELF) Bukkit.getScheduler().runTaskAsynchronously(mainClassAccess, () -> mainClassAccess.mm.JSONRemoveRPGLibraryIfExists(block.getX(), block.getY(), block.getZ(), event.getBlock().getWorld().getName()));

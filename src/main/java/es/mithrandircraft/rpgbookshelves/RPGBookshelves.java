@@ -15,8 +15,8 @@ public final class RPGBookshelves extends JavaPlugin {
         getConfig().options().copyDefaults();
         saveDefaultConfig();
 
-        //Create json file if not exists:
-        if(mm.JSONFileCreateIfNotExists()) System.out.println("[RPGBookshelves]: New JSON file created inside plugin folder for rpg bookshelves data.");
+        //Create save directory:
+        if(mm.CreateBaseSaveDirectoryIfNotExists()) System.out.println("[RPGBookshelves]: Save folder created.");
 
         //Event registring:
         getServer().getPluginManager().registerEvents(new BlockBreakEv(this), this);

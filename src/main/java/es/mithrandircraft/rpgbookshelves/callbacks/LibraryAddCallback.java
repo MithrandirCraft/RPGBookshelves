@@ -1,5 +1,5 @@
 package es.mithrandircraft.rpgbookshelves.callbacks;
 
 public interface LibraryAddCallback {
-    void onAdded();
+    void done(Boolean done);
 }
